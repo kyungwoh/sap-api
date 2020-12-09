@@ -1,0 +1,5 @@
+spring:
+  datasource:
+      url: jdbc:mysql://database-1.cf2cmrhaysfc.us-west-1.rds.amazonaws.com:3306/blog
+      username: admin
+      password: Amazon1004!
