@@ -1,8 +1,11 @@
 ###
-GET http://localhost:8080/categories
+GET http://localhost:5000/
 
 ###
-GET http://localhost:8080/posts
+GET http://localhost:5000/categories
 
 ###
-GET http://localhost:8080/headlines
+GET http://localhost:5000/posts
+
+###
+GET http://localhost:5000/headlines
