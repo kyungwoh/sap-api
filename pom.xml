@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>blog-api</artifactId>
-	<version>5</version>
+	<version>8</version>
 	<name>blog</name>
 	<description>Blog demo for SAP</description>
 
@@ -48,7 +48,11 @@
             <artifactId>querydsl-jpa</artifactId>
             <version>4.2.2</version>
         </dependency>
-    </dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+	</dependencies>
 
 	<build>
 		<plugins>
