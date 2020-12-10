@@ -11,6 +11,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class BlogService {
@@ -25,8 +26,11 @@ public class BlogService {
     public List<CategoryResponse> getCategories() {
         return CategoryMapper.convert(categoryRepository.findAll(Sort.by(Sort.Direction.ASC, "categoryId")));
     }
-    public List<PostResponse> getPosts() {
-        return postRepository.getPosts();
+    public List<PostResponse> getPosts(Integer categoryId) {
+        List<PostResponse> posts = postRepository.getPosts();
+        return categoryId == null ?
+                posts :
+                posts.stream().filter(p -> p.getCategoryId().equals(categoryId)).collect(Collectors.toList());
     }
 
     public List<HeadlineResponse> getHeadlines() {
