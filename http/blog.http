@@ -11,4 +11,10 @@ GET http://localhost:5000/posts
 GET http://localhost:5000/posts?categoryId=1
 
 ###
+GET http://localhost:5000/posts?cacheOn=true
+
+###
+GET http://localhost:5000/posts?categoryId=3&cacheOn=true
+
+###
 GET http://localhost:5000/headlines

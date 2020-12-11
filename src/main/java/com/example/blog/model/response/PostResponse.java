@@ -2,8 +2,10 @@ package com.example.blog.model.response;
 
 import lombok.Getter;
 
+import java.io.Serializable;
+
 @Getter
-public class PostResponse {
+public class PostResponse implements Serializable {
     private Integer postId;
     private String postTitle;
     private String postContent;
